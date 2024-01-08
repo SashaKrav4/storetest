@@ -12,10 +12,10 @@
         Logout</UButton>
     </header>
 
-    <div class="flex-grow">
+    <div class="flex justify-center mt-auto">
       <slot />
     </div>
-    <footer class='bg-slate-200'>
+    <footer class='bg-slate-200 mt-auto'>
       <h1>Footer @Copyright</h1>
     </footer>
   </div>

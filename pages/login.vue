@@ -1,15 +1,17 @@
 <template>
   <UCard class="shadow-xl">
-    <UFormGroup label="Name" name="uname">
-      <UInput v-model="user.username" placeholder="Ivan" />
-    </UFormGroup>
 
-    <UFormGroup label="Пароль" name="password">
-      <UInput v-model="user.password" type="password" placeholder="**********" />
-    </UFormGroup>
+      <UFormGroup label="Login" name="uname">
+        <UInput v-model="user.username" placeholder="Ivan" />
+      </UFormGroup>
 
-    <UButton color="primary" variant="solid" label="Войти" :trailing="false" type="submit" @click.prevent="login" />
+      <UFormGroup label="Password" name="password">
+        <UInput v-model="user.password" type="password" placeholder="**********" />
+      </UFormGroup>
 
+    <template #footer>
+        <UButton color="primary" variant="solid" label="Login" :trailing="false" type="submit" @click.prevent="login" />
+    </template>
   </UCard>
 </template>
 
@@ -17,7 +19,7 @@
 <script lang="ts" setup>
 
 definePageMeta({
-    layout: 'login',
+  layout: 'login',
 });
 
 import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
